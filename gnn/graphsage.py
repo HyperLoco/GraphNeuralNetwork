@@ -2,21 +2,11 @@
 # -*- coding:utf-8 -*-
 
 """
-
-
-
 Author:
-
     Weichen Shen,wcshen1994@163.com
 
-
-
 Reference:
-
     [1] Hamilton W, Ying Z, Leskovec J. Inductive representation learning on large graphs[C]//Advances in Neural Information Processing Systems. 2017: 1024-1034.(https://papers.nips.cc/paper/6703-inductive-representation-learning-on-large-graphs.pdf)
-
-
-
 """
 import numpy as np
 import tensorflow as tf

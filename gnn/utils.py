@@ -26,7 +26,6 @@ def get_splits(y,):
     idx_val = idx_val_test[0:500]
     idx_test = idx_val_test[500:1500]
 
-
     y_train = np.zeros(y.shape, dtype=np.int32)
     y_val = np.zeros(y.shape, dtype=np.int32)
     y_test = np.zeros(y.shape, dtype=np.int32)
@@ -66,13 +65,13 @@ def load_data_v1(dataset="cora", path="../data/cora/",):
     return adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask
 
 
-
 def parse_index_file(filename):
     """Parse index file."""
     index = []
     for line in open(filename):
         index.append(int(line.strip()))
     return index
+
 
 def load_data(dataset_str):
     """Load data."""
@@ -128,9 +127,7 @@ def load_data(dataset_str):
     y_val[val_mask, :] = labels[val_mask, :]
     y_test[test_mask, :] = labels[test_mask, :]
 
-
     return sp.csr_matrix(adj), features, y_train, y_val, y_test, train_mask, val_mask, test_mask
-
 
 
 def sample_mask(idx, l):
